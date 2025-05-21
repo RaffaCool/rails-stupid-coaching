@@ -1,0 +1,19 @@
+<h1>Your answer is...</h1>
+
+
+
+<% question = params[:question] %>
+
+<% if question.include?("work") %>
+  <% answer = "Great" %>
+<% elsif question.include?("?") %>
+  <% answer = "Silly question, get dressed and go to work!" %>
+<% else %>
+  <% answer = "I dont care!" %>
+<% end %>
+
+<p>You asked.. <%= params[:question] %> </p>
+
+<p> The coach says.. <%= answer %></p>
+
+<%= link_to "Ask again!", ask_path %>
